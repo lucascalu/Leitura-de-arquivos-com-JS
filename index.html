@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<h2>Ler arquivos JSON</h2>
+<button type="button" onclick="loadDoc()">Ler</button>
+
+</div>
+ 
+<p id="saida">Saida</p>
+
+<script>
+function loadDoc() {
+  
+
+
+  var url = "ai.json";//Sua URL
+
+var xhttp = new XMLHttpRequest();
+xhttp.open("GET", url, false);
+xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+console.log(xhttp.responseText);
+
+var saida1 = xhttp.responseText;
+
+document.getElementById('saida').innerText = (saida1);
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
